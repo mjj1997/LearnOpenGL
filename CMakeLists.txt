@@ -59,7 +59,7 @@ add_library(LearnOpenGL::LearnOpenGL_warnings ALIAS LearnOpenGL_warnings)
 #add_library(LearnOpenGL::LearnOpenGL_warnings INTERFACE IMPORTED)
 
 # configure files based on CMake configuration options
-add_subdirectory(configured_files)
+# add_subdirectory(configured_files)
 
 # Adding the src:
 add_subdirectory(src)
