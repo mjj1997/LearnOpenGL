@@ -8,4 +8,7 @@ function(LearnOpenGL_setup_dependencies)
   # For each dependency, see if it's
   # already been provided to us by a parent project
 
+  find_package(glfw3 CONFIG REQUIRED)
+  find_package(glad CONFIG REQUIRED)
+
 endfunction()
