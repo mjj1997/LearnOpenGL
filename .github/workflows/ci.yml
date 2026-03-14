@@ -55,6 +55,9 @@ jobs:
 
           - os: macos-latest
             compiler: gcc-14
+          
+          - os: ubuntu-latest
+            packaging_maintainer_mode: OFF
 
         include:
           # Add appropriate variables for gcov version required. This will intentionally break
@@ -139,6 +142,11 @@ jobs:
         if: matrix.os == 'ubuntu-latest'
         run: |
           sudo apt-get install libltdl-dev
+
+      - name: Ubuntu - install X11 libraries
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get install -y libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev
 
       - name: Setup Cpp
         uses: aminya/setup-cpp@v1
