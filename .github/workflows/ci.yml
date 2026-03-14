@@ -55,6 +55,9 @@ jobs:
 
           - os: macos-latest
             compiler: gcc-14
+          
+          - os: ubuntu-latest
+            packaging_maintainer_mode: OFF
 
         include:
           # Add appropriate variables for gcov version required. This will intentionally break
